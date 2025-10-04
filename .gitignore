@@ -1,0 +1,36 @@
+# Environment variables (NUNCA commitar!)
+.env
+*.env
+!.env.sample
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# SQL gerados
+scripts/inserir_*.sql
+scripts/verificar_*.py
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+nul
+*.tmp

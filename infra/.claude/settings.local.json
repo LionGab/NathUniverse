@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir)",
+      "Read(//c/Users/User/waha-n8n-stack/**)",
+      "Bash(mkdir:*)",
+      "Bash(cat:*)",
+      "Bash(pip install:*)",
+      "Bash(dir:*)",
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Read(//c/Users/User/AppData/Roaming/Claude/**)",
+      "Bash(py --version)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

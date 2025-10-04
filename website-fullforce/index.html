@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Force Academia - Transforme seu corpo e mente em Matupá, MT. +700 alunos ativos. Musculação, funcional e treinos personalizados.">
+    <title>Full Force Academia | +700 Alunos Ativos | Academia em Matupá - MT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header com CTA -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>FULL FORCE</h1>
+                    <span>ACADEMIA</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#planos">Planos</a>
+                    <a href="#modalidades">Modalidades</a>
+                    <a href="#contato">Contato</a>
+                    <span class="horario-header">⏰ 04h30 às 21h</span>
+                    <a href="#" class="btn-cta" onclick="openWhatsApp()">Agendar Aula Grátis</a>
+                </div>
+                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2 class="hero-title">Transforme Seu Corpo,<br>Fortaleça Sua Mente</h2>
+            <p class="hero-subtitle">A melhor academia de Matupá-MT com +700 alunos ativos, treinos personalizados e equipamentos de ponta</p>
+            <p class="hero-horario">⏰ Aberto das 04h30 às 21h - Sem intervalo</p>
+            <div class="hero-ctas">
+                <button class="btn-primary" onclick="openWhatsApp()">Agende Sua Aula Grátis</button>
+                <button class="btn-secondary" onclick="scrollToPlanos()">Ver Planos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Form -->
+    <section class="lead-form" id="agendar">
+        <div class="container">
+            <h2>Ganhe 1 Semana Grátis!</h2>
+            <p>Preencha o formulário e receba acesso imediato</p>
+            <form id="leadForm" onsubmit="handleLeadSubmit(event)">
+                <input type="text" id="nome" placeholder="Seu nome completo" required>
+                <input type="tel" id="telefone" placeholder="(66) 99999-9999" required>
+                <input type="email" id="email" placeholder="seu@email.com" required>
+                <select id="objetivo" required>
+                    <option value="">Seu objetivo principal</option>
+                    <option value="emagrecimento">Emagrecimento</option>
+                    <option value="hipertrofia">Ganho de Massa</option>
+                    <option value="saude">Saúde e Bem-estar</option>
+                    <option value="performance">Performance Atlética</option>
+                </select>
+                <button type="submit" class="btn-submit">Quero Minha Semana Grátis</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section class="modalidades" id="modalidades">
+        <div class="container">
+            <h2>Nossas Modalidades</h2>
+            <div class="grid-modalidades">
+                <div class="card-modalidade">
+                    <div class="icon">💪</div>
+                    <h3>Musculação</h3>
+                    <p>Equipamentos de última geração e treinos personalizados para seus objetivos</p>
+                </div>
+                <div class="card-modalidade">
+                    <div class="icon">🏃</div>
+                    <h3>Funcional</h3>
+                    <p>Treinamento funcional para melhorar condicionamento e performance</p>
+                </div>
+                <div class="card-modalidade">
+                    <div class="icon">🥊</div>
+                    <h3>Treinamento HIIT</h3>
+                    <p>Queima de gordura acelerada com treinos intervalados de alta intensidade</p>
+                </div>
+                <div class="card-modalidade">
+                    <div class="icon">🧘</div>
+                    <h3>Personal Trainer</h3>
+                    <p>Acompanhamento individual com profissionais qualificados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos e Preços -->
+    <section class="planos" id="planos">
+        <div class="container">
+            <h2>Escolha Seu Plano</h2>
+            <p class="planos-horario">⏰ Horário de Funcionamento: 04h30 às 21h (sem intervalo)</p>
+
+            <div class="grid-planos">
+                <div class="card-plano">
+                    <h3>Trimestral (3 meses)</h3>
+                    <div class="preco">
+                        <span class="valor">R$ 119</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul>
+                        <li>✅ Acesso ilimitado</li>
+                        <li>✅ Todas modalidades</li>
+                        <li>💰 Matrícula: R$ 20,00</li>
+                        <li>🏋️ Avaliação física: R$ 120,00</li>
+                        <li>✅ App de treino</li>
+                    </ul>
+                    <button class="btn-plano" onclick="selectPlan('trimestral')">Escolher Trimestral</button>
+                </div>
+
+                <div class="card-plano">
+                    <h3>Semestral (6 meses)</h3>
+                    <div class="preco">
+                        <span class="valor">R$ 109</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul>
+                        <li>✅ Acesso ilimitado</li>
+                        <li>✅ Todas modalidades</li>
+                        <li>💰 Matrícula: R$ 20,00</li>
+                        <li>🏋️ Avaliação física: R$ 120,00</li>
+                        <li>✅ App de treino</li>
+                        <li>✅ Personal trainer inclusos</li>
+                    </ul>
+                    <button class="btn-plano" onclick="selectPlan('semestral')">Escolher Semestral</button>
+                </div>
+
+                <div class="card-plano featured">
+                    <div class="badge">MELHOR CUSTO-BENEFÍCIO</div>
+                    <h3>Clube+ Full</h3>
+                    <div class="preco">
+                        <span class="destaque">11x R$ 129</span>
+                        <span class="valor">R$ 119</span>
+                        <span class="periodo">/mês (média)</span>
+                    </div>
+                    <div class="selo-promocao">🔥 Promoção por Tempo Limitado</div>
+                    <ul>
+                        <li>✅ Acesso ilimitado a todas modalidades</li>
+                        <li>💰 Matrícula GRÁTIS</li>
+                        <li>🏋️ 1ª Avaliação física GRÁTIS</li>
+                        <li>✅ App de treino personalizado</li>
+                        <li>✅ Personal trainer mensal</li>
+                        <li>🎁 Leve 1 amigo grátis*</li>
+                        <li>✅ Desconto em suplementos</li>
+                    </ul>
+                    <p class="obs">*Amigo que nunca frequentou a academia</p>
+                    <button class="btn-plano destaque" onclick="selectPlan('clube-full')">Quero o Clube+ Full</button>
+                </div>
+
+                <div class="card-plano">
+                    <h3>Anual (12 meses)</h3>
+                    <div class="preco">
+                        <span class="valor">R$ 99</span>
+                        <span class="periodo">/mês</span>
+                    </div>
+                    <ul>
+                        <li>✅ Acesso ilimitado</li>
+                        <li>✅ Todas modalidades</li>
+                        <li>💰 Matrícula GRÁTIS</li>
+                        <li>🏋️ 1ª Avaliação física GRÁTIS</li>
+                        <li>✅ App de treino</li>
+                        <li>🎁 Leve 1 amigo grátis*</li>
+                        <li>✅ Desconto suplementos</li>
+                    </ul>
+                    <p class="obs">*Amigo que nunca frequentou a academia</p>
+                    <button class="btn-plano" onclick="selectPlan('anual')">Escolher Anual</button>
+                </div>
+            </div>
+
+            <!-- Tabela Comparativa -->
+            <div class="tabela-comparacao">
+                <h3>Compare os Planos</h3>
+                <div class="tabela-wrapper">
+                    <table class="tabela-planos">
+                        <thead>
+                            <tr>
+                                <th>Benefícios</th>
+                                <th>Trimestral</th>
+                                <th>Semestral</th>
+                                <th class="destaque-col">Clube+ Full</th>
+                                <th>Anual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mensalidade</strong></td>
+                                <td>R$ 119/mês</td>
+                                <td>R$ 109/mês</td>
+                                <td class="destaque-col">11x R$ 129 (R$ 119/mês)</td>
+                                <td>R$ 99/mês</td>
+                            </tr>
+                            <tr>
+                                <td><strong>💰 Matrícula</strong></td>
+                                <td>R$ 20,00</td>
+                                <td>R$ 20,00</td>
+                                <td class="destaque-col">GRÁTIS</td>
+                                <td>GRÁTIS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🏋️ Avaliação Física</strong></td>
+                                <td>R$ 120,00</td>
+                                <td>R$ 120,00</td>
+                                <td class="destaque-col">1ª GRÁTIS</td>
+                                <td>1ª GRÁTIS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>🎁 Leve Amigo Grátis</strong></td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td class="destaque-col">✅</td>
+                                <td>✅</td>
+                            </tr>
+                            <tr>
+                                <td><strong>✅ Acesso Total</strong></td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td class="destaque-col">✅</td>
+                                <td>✅</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2>O Que Nossos +700 Alunos Dizem</h2>
+            <div class="grid-depoimentos">
+                <div class="card-depoimento">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Melhor academia de Matupá! Equipamentos novos e professores atenciosos. Horário das 04h30 perfeito para minha rotina!"</p>
+                    <strong>- Maria Silva</strong>
+                </div>
+                <div class="card-depoimento">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Perdi 15kg em 4 meses com o acompanhamento personalizado. O Clube+ Full valeu cada centavo!"</p>
+                    <strong>- João Santos</strong>
+                </div>
+                <div class="card-depoimento">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Ambiente motivador e limpo. Funcionamento até 21h sem intervalo é o diferencial. Recomendo!"</p>
+                    <strong>- Ana Costa</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="grid-contato">
+                <div class="info-contato">
+                    <h2>Visite Nossa Academia</h2>
+                    <p class="sobre-nos">A FullForce Academia já conta com mais de 700 alunos ativos. Funcionamento das 04h30 às 21h sem intervalos. Transparência total: matrícula, avaliação e benefícios definidos em cada plano.</p>
+                    <div class="info-item">
+                        <strong>📍 Endereço:</strong>
+                        <p>Matupá - MT</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Telefone:</strong>
+                        <p>(66) 99999-9999</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>⏰ Horário:</strong>
+                        <p><strong>04h30 às 21h</strong><br>Todos os dias, sem intervalo</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com/fullforceacademia" target="_blank">📸 Instagram</a>
+                        <a href="#" onclick="openWhatsApp()">💬 WhatsApp</a>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.5!2d-54.9333!3d-10.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE1JzAwLjAiUyA1NMKwNTUnNTkuOSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Full Force Academia - +700 Alunos Ativos. Todos os direitos reservados.</p>
+            <p>⏰ Horário: 04h30 às 21h (sem intervalo) | Matupá-MT</p>
+            <p>Desenvolvido para transformar vidas</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp()" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

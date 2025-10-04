@@ -1,0 +1,690 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6b00;
+    --secondary-color: #1a1a1a;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, #ff6b00 0%, #ff8c00 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: -5px;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.horario-header {
+    background: #f0f0f0;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-cta {
+    background: var(--gradient);
+    color: var(--white) !important;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920') center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Lead Form */
+.lead-form {
+    background: var(--gradient);
+    padding: 4rem 0;
+    color: var(--white);
+}
+
+.lead-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.lead-form p {
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+#leadForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+#leadForm input, #leadForm select {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #000;
+}
+
+/* Modalidades */
+.modalidades {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.modalidades h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-modalidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card-modalidade {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-modalidade:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card-modalidade .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card-modalidade h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Planos */
+.planos {
+    padding: 5rem 0;
+}
+
+.planos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-planos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-plano {
+    background: var(--white);
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card-plano:hover {
+    transform: scale(1.05);
+}
+
+.card-plano.featured {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 40px rgba(255, 107, 0, 0.2);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.3rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-plano h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.preco {
+    margin: 1.5rem 0;
+}
+
+.valor {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.periodo {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-plano ul {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.card-plano ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.btn-plano {
+    width: 100%;
+    background: var(--gradient);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-plano:hover {
+    transform: translateY(-3px);
+}
+
+/* Depoimentos */
+.depoimentos {
+    background: var(--light-bg);
+    padding: 5rem 0;
+}
+
+.depoimentos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card-depoimento {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.estrelas {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-depoimento p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Contato */
+.contato {
+    padding: 5rem 0;
+}
+
+.grid-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.info-contato h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item strong {
+    display: block;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    background: var(--gradient);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.mapa iframe {
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+    }
+
+    .grid-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-planos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Hero Horário */
+.hero-horario {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background: rgba(255,107,0,0.9);
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+}
+
+/* Planos Horário */
+.planos-horario {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Selo Promocao e Elementos do Clube+ Full */
+.selo-promocao {
+    background: #ffeb3b;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-weight: 700;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.preco .destaque {
+    display: block;
+    font-size: 1.3rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-bottom: 0.5rem;
+}
+
+.card-plano .obs {
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.btn-plano.destaque {
+    background: linear-gradient(135deg, #ffeb3b 0%, #ffc107 100%);
+    color: #000;
+    font-weight: 800;
+    box-shadow: 0 5px 20px rgba(255,235,59,0.4);
+}
+
+.btn-plano.destaque:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255,235,59,0.6);
+}
+
+/* Tabela Comparativa */
+.tabela-comparacao {
+    margin-top: 4rem;
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.tabela-comparacao h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.tabela-wrapper {
+    overflow-x: auto;
+}
+
+.tabela-planos {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tabela-planos thead {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.tabela-planos th,
+.tabela-planos td {
+    padding: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabela-planos th {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.tabela-planos tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.destaque-col {
+    background: #fff3e0 !important;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.tabela-planos thead .destaque-col {
+    background: var(--primary-color) !important;
+    color: var(--white);
+}
+
+/* Sobre Nós */
+.sobre-nos {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* Responsivo - Tabela */
+@media (max-width: 768px) {
+    .tabela-comparacao {
+        padding: 1.5rem;
+    }
+
+    .tabela-planos th,
+    .tabela-planos td {
+        padding: 0.8rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .tabela-comparacao h3 {
+        font-size: 1.5rem;
+    }
+
+    .horario-header {
+        display: none;
+    }
+
+    .hero-horario {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .planos-horario {
+        font-size: 0.95rem;
+    }
+
+    .grid-planos {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabela-planos {
+        font-size: 0.75rem;
+    }
+
+    .tabela-planos th,
+    .tabela-planos td {
+        padding: 0.6rem 0.3rem;
+    }
+}
