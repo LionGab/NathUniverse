@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full Force Academia em Matupá-MT. +700 alunos. Planos desde R$99/mês. Aberto 04h30-21h. Agende sua aula grátis: (66) 99999-9999">
+    <title>Full Force Academia Matupá-MT | Planos R$99/mês | WhatsApp (66) 99999-9999</title>
+
+    <!-- Critical CSS inline -->
+    <style>
+        /* Reset */
+        *{margin:0;padding:0;box-sizing:border-box}
+
+        /* Variables */
+        :root{
+            --orange:#ff6b00;
+            --dark:#1a1a1a;
+            --gray:#666;
+            --light:#f5f5f5;
+        }
+
+        /* Base */
+        body{
+            font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+            line-height:1.5;
+            color:var(--dark);
+        }
+
+        /* Hero - Above the fold */
+        .hero{
+            background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/></svg>');
+            color:#fff;
+            padding:1.5rem 1rem;
+            text-align:center;
+            min-height:60vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+
+        .hero h1{
+            font-size:clamp(1.8rem,5vw,3rem);
+            font-weight:900;
+            margin-bottom:.5rem;
+            color:#fff;
+        }
+
+        .hero p{
+            font-size:clamp(1rem,3vw,1.3rem);
+            margin-bottom:1.5rem;
+            opacity:.9;
+        }
+
+        /* WhatsApp CTA - MASSIVE */
+        .whats-cta{
+            background:#25D366;
+            color:#fff;
+            padding:1.2rem 2rem;
+            font-size:1.3rem;
+            font-weight:700;
+            border:none;
+            border-radius:50px;
+            cursor:pointer;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            gap:.5rem;
+            margin:1rem auto;
+            box-shadow:0 4px 15px rgba(37,211,102,.4);
+            transition:transform .2s;
+        }
+
+        .whats-cta:hover{transform:scale(1.05)}
+
+        .whats-cta::before{content:"💬 "}
+
+        /* Quick info pills */
+        .quick-info{
+            display:flex;
+            flex-wrap:wrap;
+            gap:.8rem;
+            justify-content:center;
+            margin:1rem 0;
+        }
+
+        .pill{
+            background:rgba(255,107,0,.9);
+            padding:.5rem 1rem;
+            border-radius:20px;
+            font-size:.9rem;
+            font-weight:600;
+        }
+
+        /* Container */
+        .container{
+            max-width:1200px;
+            margin:0 auto;
+            padding:0 1rem;
+        }
+
+        /* Pricing - SIMPLE table */
+        .pricing{
+            background:var(--light);
+            padding:2rem 1rem;
+        }
+
+        .pricing h2{
+            text-align:center;
+            font-size:2rem;
+            margin-bottom:1.5rem;
+            color:var(--dark);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:#fff;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
+        }
+
+        th,td{
+            padding:1rem;
+            text-align:left;
+            border-bottom:1px solid #eee;
+        }
+
+        th{
+            background:var(--dark);
+            color:#fff;
+            font-weight:700;
+        }
+
+        .price{
+            font-size:1.8rem;
+            color:var(--orange);
+            font-weight:900;
+        }
+
+        .featured{
+            background:#fffbf0;
+            border-left:4px solid var(--orange);
+        }
+
+        .badge{
+            background:#ffeb3b;
+            color:#000;
+            padding:.3rem .8rem;
+            border-radius:15px;
+            font-size:.75rem;
+            font-weight:700;
+            display:inline-block;
+            margin-bottom:.5rem;
+        }
+
+        /* Contact Section */
+        .contact{
+            padding:2rem 1rem;
+            background:#fff;
+        }
+
+        .contact-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:1.5rem;
+            margin-top:1.5rem;
+        }
+
+        .contact-card{
+            background:var(--light);
+            padding:1.5rem;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        .contact-card strong{
+            display:block;
+            color:var(--orange);
+            margin-bottom:.5rem;
+            font-size:1.1rem;
+        }
+
+        /* Map */
+        iframe{
+            width:100%;
+            height:300px;
+            border:none;
+            border-radius:10px;
+        }
+
+        /* Footer */
+        footer{
+            background:var(--dark);
+            color:#fff;
+            text-align:center;
+            padding:1.5rem 1rem;
+            font-size:.9rem;
+        }
+
+        /* Mobile optimizations */
+        @media(max-width:768px){
+            table{font-size:.85rem}
+            th,td{padding:.7rem .5rem}
+            .price{font-size:1.4rem}
+            .whats-cta{font-size:1.1rem;padding:1rem 1.5rem}
+        }
+
+        /* Fixed WhatsApp button */
+        .whats-fixed{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#25D366;
+            color:#fff;
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:2rem;
+            box-shadow:0 4px 12px rgba(0,0,0,.3);
+            z-index:999;
+            text-decoration:none;
+            transition:transform .2s;
+        }
+
+        .whats-fixed:hover{transform:scale(1.1)}
+    </style>
+</head>
+<body>
+
+    <!-- HERO - ABOVE THE FOLD -->
+    <section class="hero">
+        <h1>FULL FORCE ACADEMIA</h1>
+        <p><strong>+700 Alunos Ativos</strong> | Matupá-MT</p>
+
+        <div class="quick-info">
+            <span class="pill">⏰ 04h30 às 21h</span>
+            <span class="pill">💪 Musculação + Funcional</span>
+            <span class="pill">📍 Matupá-MT</span>
+        </div>
+
+        <a href="https://wa.me/5566999999999?text=Ol%C3%A1!%20Quero%20agendar%20minha%20aula%20gr%C3%A1tis%20na%20Full%20Force!"
+           class="whats-cta">
+            AGENDAR AULA GRÁTIS
+        </a>
+
+        <p style="margin-top:1rem;font-size:1.1rem">
+            <strong>(66) 99999-9999</strong>
+        </p>
+    </section>
+
+    <!-- PRICING - NO SCROLL NEEDED -->
+    <section class="pricing">
+        <div class="container">
+            <h2>💰 Planos e Preços</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>Valor/mês</th>
+                        <th>Benefícios</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Trimestral</strong><br><small>3 meses</small></td>
+                        <td><span class="price">R$119</span></td>
+                        <td>
+                            ✅ Acesso ilimitado<br>
+                            💰 Matrícula: R$20<br>
+                            🏋️ Avaliação: R$120
+                        </td>
+                        <td><a href="https://wa.me/5566999999999?text=Quero%20o%20plano%20TRIMESTRAL" class="whats-cta" style="font-size:.9rem;padding:.7rem 1rem">Contratar</a></td>
+                    </tr>
+
+                    <tr class="featured">
+                        <td>
+                            <div class="badge">🔥 MELHOR CUSTO-BENEFÍCIO</div>
+                            <strong>Clube+ Full</strong><br>
+                            <small>11x R$129</small>
+                        </td>
+                        <td><span class="price">R$119</span><br><small>média</small></td>
+                        <td>
+                            ✅ Acesso ilimitado<br>
+                            💰 Matrícula GRÁTIS<br>
+                            🏋️ 1ª Avaliação GRÁTIS<br>
+                            🎁 Leve 1 amigo grátis<br>
+                            ✅ Personal mensal
+                        </td>
+                        <td><a href="https://wa.me/5566999999999?text=Quero%20o%20CLUBE%2B%20FULL" class="whats-cta" style="font-size:.9rem;padding:.7rem 1rem;background:#ffeb3b;color:#000">QUERO ESTE</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Anual</strong><br><small>12 meses</small></td>
+                        <td><span class="price">R$99</span></td>
+                        <td>
+                            ✅ Acesso ilimitado<br>
+                            💰 Matrícula GRÁTIS<br>
+                            🏋️ 1ª Avaliação GRÁTIS<br>
+                            🎁 Leve 1 amigo grátis
+                        </td>
+                        <td><a href="https://wa.me/5566999999999?text=Quero%20o%20plano%20ANUAL" class="whats-cta" style="font-size:.9rem;padding:.7rem 1rem">Contratar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CONTACT & LOCATION -->
+    <section class="contact">
+        <div class="container">
+            <h2 style="text-align:center;margin-bottom:1rem">📍 Localização e Contato</h2>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <strong>📞 Telefone</strong>
+                    <p>(66) 99999-9999</p>
+                    <a href="https://wa.me/5566999999999" style="color:var(--orange);font-weight:600">💬 WhatsApp</a>
+                </div>
+
+                <div class="contact-card">
+                    <strong>⏰ Horário</strong>
+                    <p><strong>04h30 às 21h</strong></p>
+                    <p>Sem intervalo</p>
+                </div>
+
+                <div class="contact-card">
+                    <strong>📍 Endereço</strong>
+                    <p>Matupá - MT</p>
+                    <a href="https://instagram.com/fullforceacademia" target="_blank" style="color:var(--orange);font-weight:600">📸 Instagram</a>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div style="margin-top:2rem">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.5!2d-54.9333!3d-10.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDE1JzAwLjAiUyA1NMKwNTUnNTkuOSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Full Force Academia</strong> - +700 Alunos Ativos</p>
+        <p>⏰ 04h30 às 21h | 📍 Matupá-MT | 📞 (66) 99999-9999</p>
+        <p style="margin-top:.5rem;opacity:.7">&copy; 2025 Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/5566999999999?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Full%20Force%20Academia"
+       class="whats-fixed"
+       title="Fale conosco no WhatsApp">
+        💬
+    </a>
+
+    <!-- NO JAVASCRIPT NEEDED - Pure HTML works without JS -->
+    <!-- Optional: Analytics only -->
+    <script>
+        // Optional: Track clicks (can be removed for pure static)
+        document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', () => {
+                console.log('WhatsApp click:', link.textContent);
+            });
+        });
+    </script>
+
+</body>
+</html>
